@@ -1,0 +1,66 @@
+what is the x86 assembly language?
+  - an instruction that was built to be detected by the processors (intel 8000)
+  - this language is so powerful as it makes you understand how system talks at low level .
+  - also we will study the 32bit systems as the malware will be written in 32bit -> this works on 64 bits
+  - notes on hexadecimal language ;
+    - First Column (4+9=13): 13 is less than 16. In hex, we represent 13 with the letter D. Since we didn't hit 16, there is no "group of 16" to carry to the next column.
+
+        Second Column (8+2=10): 10 is less than 16. In hex, we represent 10 with the letter A. Again, no carry.
+    
+        Third Column (C+3=12+3=15): 15 is less than 16. In hex, we represent 15 with the letter F. Still no carry.
+
+        The "Golden Rule" for Hex Addition
+      
+        Think of it like an odometer
+      
+        Add the numbers in decimal.
+    
+        If the sum is 0 to 15, just write the hex equivalent (0–F).
+    
+        If the sum is 16 or more, subtract 16, write the remainder, and carry 1 to the next column.
+-> look at the notebook to understand the examples of hexadecimal
+
+----
+  now focus on Transistor;
+    -it's a device that are used to build the chips on the computer ...
+    - it has pins for input,output -> if you connect two pins with voltage -> current will pass between them
+    - if you removed the volt -> no current will be passed between them
+    - the most important type of transistors -> Field effect transistors.
+    - <img width="288" height="175" alt="image" src="https://github.com/user-attachments/assets/26751bae-6235-451f-a9ee-f2a03896e8f4" />
+    -as you know it has 3 gates -> drain,source,gate.
+    - volt -> 1 ,no volt->0 
+    - 
+    - just know transistor is used to build the circuits of computer very well
+
+----
+- byte -> 8bits
+- 2bytes -> word
+- 4bytes-> double words
+- 8bytes(64bits) -> equad  word
+  computer handle any value using bits+memory address
+  you will know later how to know the address of any instruction after decompile it using esp inside gdb
+  - instruction pointer -> indicate to the next instruction to be run inside memory.
+
+ ----
+ Any computer contain;
+   - memory
+   - cpu
+   - I/O devices
+
+    - for cpu 
+    we have control unit , Alu,Execution unit,registers,flags
+      <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/42dbcd20-4ef4-42f5-b89a-78f225945e9a" />
+        - as you know -> Alu for arithmatic operations...
+        -Control unit -> control retrieving data from memory and execute it 
+        - Execution unit -> where data is brought and being executed 
+        - registers -> internal memory storage inside cpu
+        - flags -> do events inside cpu (hold 1, 0 ) 
+        
+
+
+
+
+
+
+
+
