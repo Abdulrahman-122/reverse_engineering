@@ -79,19 +79,31 @@ General-purpose Registers of x86 32bits;
 --------
 
 Segment Registers;
-  -(CS) Code segment register ->stores the base location of code section for data access.
-  -(DS)Data segment register ->store default location of  variables for data access.
-  -(ES) Extra segment register ->  used  in string operation.
-  -SS ->stack segment register -> store base location of stack segment + used when using stack pointer or base  pointer.
-  -Fs -> extra segment register
-  -GS -> extra segment register.
+
   <img width="300" height="168" alt="image" src="https://github.com/user-attachments/assets/c1683466-314d-48bf-beb1-5d23029f91d4" />
 
-notes;
-  -;segment registers -> 16bits + points to the memory specific segment.
-  -Cs -> has pointer to code segment in memory.
-  - processor -> retrieve codes from  memory based on CS register+ offset value of EIP(instruction pointer register)
-  - 
+
+  segment registers -> are used for referencing memory locations.
+types of segment registers
+1. CS -> code segment register -> stores base location of code section -> to make data access
+2. DS -> data segment register -> stores default locations of variables => to make data access
+3. ES -> extra segment register -> used in string operations
+4. SS -> stack segment register ->stores the base location of stack segment + used implicitly when using stack pointer + explicitly when using base pointer
+5. FS -> extra segment register
+6. GS -> extra segment register
+
+segment registers -> 16 bit + contain pointer > memory specific segment.
+cs -> points to the code segment in memory
+	code segments -> place where instructions are stored in memory
+	
+processor -> return the code segment from memory based on Cs register + value of EIP (instruction pointer) to 
+
+Ds,Es,FS,GS -> points to data segments inside memory +help program ->separate data elements to avoid overlap between them. 
+program -> load data segment registers  with appropriate value + reference memory locations using an offset value.
+SS -> indicate to the stack segment  -> stack contain data passed to programs 
+
+
+segment registers -> used in OS + they can't change or alter the space of memory directly however programs depend on the space using segment registers.
 
 
 
