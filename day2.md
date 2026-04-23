@@ -76,9 +76,22 @@ General-purpose Registers of x86 32bits;
           -the lower bits called;SI,DI,SP,BP
           <img width="1085" height="318" alt="image" src="https://github.com/user-attachments/assets/5841ec1c-d2c3-4ddc-b807-66614117db7c" />
 
+--------
 
+Segment Registers;
+  -(CS) Code segment register ->stores the base location of code section for data access.
+  -(DS)Data segment register ->store default location of  variables for data access.
+  -(ES) Extra segment register ->  used  in string operation.
+  -SS ->stack segment register -> store base location of stack segment + used when using stack pointer or base  pointer.
+  -Fs -> extra segment register
+  -GS -> extra segment register.
+  <img width="300" height="168" alt="image" src="https://github.com/user-attachments/assets/c1683466-314d-48bf-beb1-5d23029f91d4" />
 
-
+notes;
+  -;segment registers -> 16bits + points to the memory specific segment.
+  -Cs -> has pointer to code segment in memory.
+  - processor -> retrieve codes from  memory based on CS register+ offset value of EIP(instruction pointer register)
+  - 
 
 
 
